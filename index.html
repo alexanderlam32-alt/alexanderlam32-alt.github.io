@@ -10,6 +10,9 @@
   <title>Alexander Lam | Engineering Portfolio</title>
 
   <style>
+
+    /* GENERAL STYLING */
+
     * {
       box-sizing: border-box;
     }
@@ -62,45 +65,80 @@
       color: #7db8ff;
     }
 
-    /* HERO SECTION */
+    /* HERO SECTION WITH FSAE BACKGROUND */
 
     .hero {
-      background: linear-gradient(
-        135deg,
-        #10233d,
-        #244a72
-      );
+      position: relative;
+
+      background:
+        linear-gradient(
+          rgba(10, 22, 40, 0.58),
+          rgba(10, 22, 40, 0.68)
+        ),
+        url("fsae-car.png");
+
+      background-size: cover;
+      background-position: center 52%;
+      background-repeat: no-repeat;
+      background-color: #10233d;
+
       color: white;
       text-align: center;
-      padding: 110px 20px;
+
+      min-height: 520px;
+      padding: 100px 20px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
 
     .hero h1 {
       font-size: clamp(40px, 6vw, 64px);
+      font-weight: 700;
       margin: 0 0 10px;
       letter-spacing: 1px;
+
+      text-shadow:
+        0 3px 12px rgba(0,0,0,0.35);
     }
 
     .hero p {
       font-size: 19px;
-      color: #dce7f5;
-      margin: 8px 0;
+      color: #ffffff;
+      margin: 6px 0;
+
+      text-shadow:
+        0 2px 8px rgba(0,0,0,0.5);
+    }
+
+    .hero .graduation {
+      font-size: 16px;
+      color: #e0e9f4;
+      margin-top: 12px;
     }
 
     .hero-button {
       display: inline-block;
-      margin-top: 25px;
+      margin-top: 28px;
       padding: 12px 28px;
+
       background: white;
       color: #10233d;
+
       text-decoration: none;
       border-radius: 6px;
       font-weight: bold;
-      transition: transform 0.2s;
+
+      transition:
+        transform 0.2s,
+        background 0.2s;
     }
 
     .hero-button:hover {
       transform: translateY(-3px);
+      background: #e8f1fb;
     }
 
     /* GENERAL LAYOUT */
@@ -142,14 +180,16 @@
     .availability {
       margin-top: 30px;
       padding: 17px 22px;
+
       background: #eef5fc;
       border-left: 4px solid #2768a8;
       border-radius: 4px;
+
       font-weight: bold;
       color: #17395b;
     }
 
-    /* PORTFOLIO CARDS */
+    /* PORTFOLIO SECTION */
 
     .portfolio-section {
       background: #f7f9fc;
@@ -163,18 +203,24 @@
 
     .card-grid {
       display: grid;
+
       grid-template-columns:
         repeat(3, minmax(0, 1fr));
+
       gap: 25px;
     }
+
+    /* PORTFOLIO CARDS */
 
     .card {
       background: white;
       border: 1px solid #e4e9ef;
       border-radius: 12px;
       padding: 35px 28px;
+
       text-decoration: none;
       color: #243247;
+
       box-shadow:
         0 5px 18px rgba(0,0,0,0.05);
 
@@ -188,6 +234,7 @@
 
     .card:hover {
       transform: translateY(-7px);
+
       box-shadow:
         0 14px 30px rgba(0,0,0,0.12);
     }
@@ -253,12 +300,17 @@
       display: inline-block;
       margin: 8px;
       padding: 10px 22px;
+
       border: 1px solid #2768a8;
       border-radius: 6px;
+
       color: #2768a8;
       text-decoration: none;
       font-weight: bold;
-      transition: background 0.2s, color 0.2s;
+
+      transition:
+        background 0.2s,
+        color 0.2s;
     }
 
     .contact-links a:hover {
@@ -279,12 +331,23 @@
     /* MOBILE RESPONSIVENESS */
 
     @media (max-width: 800px) {
+
       .card-grid {
         grid-template-columns: 1fr;
       }
 
       .hero {
-        padding: 80px 20px;
+        min-height: 430px;
+        padding: 75px 20px;
+        background-position: center;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero p {
+        font-size: 16px;
       }
 
       .container {
@@ -303,6 +366,7 @@
       h2 {
         font-size: 28px;
       }
+
     }
 
   </style>
@@ -310,20 +374,32 @@
 
 <body>
 
-  <!-- NAVIGATION -->
+  <!-- NAVIGATION BAR -->
 
   <nav>
+
     <a class="logo" href="index.html">
       Alexander Lam
     </a>
 
     <div class="nav-links">
+
       <a href="index.html">Home</a>
+
       <a href="#about">About Me</a>
+
       <a href="projects.html">Projects</a>
-      <a href="experience.html">Work Experience</a>
+
+      <a href="experience.html">
+        Work Experience
+      </a>
+
       <a href="hobbies.html">Hobbies</a>
+
+      <a href="#contact">Contact</a>
+
     </div>
+
   </nav>
 
 
@@ -341,6 +417,10 @@
       University of Houston
     </p>
 
+    <p class="graduation">
+      Anticipated Graduation: Spring 2029
+    </p>
+
     <a class="hero-button" href="#portfolio">
       Explore My Portfolio
     </a>
@@ -348,7 +428,7 @@
   </header>
 
 
-  <!-- ABOUT ME -->
+  <!-- ABOUT ME SECTION -->
 
   <section class="about" id="about">
 
@@ -394,9 +474,11 @@
   </section>
 
 
-  <!-- PORTFOLIO SECTIONS -->
+  <!-- PORTFOLIO SECTION -->
 
-  <section class="portfolio-section" id="portfolio">
+  <section
+    class="portfolio-section"
+    id="portfolio">
 
     <div class="container">
 
@@ -410,7 +492,7 @@
 
       <div class="card-grid">
 
-        <!-- PROJECTS CARD -->
+        <!-- PROJECTS -->
 
         <a href="projects.html" class="card">
 
@@ -432,7 +514,7 @@
         </a>
 
 
-        <!-- WORK EXPERIENCE CARD -->
+        <!-- WORK EXPERIENCE -->
 
         <a href="experience.html" class="card">
 
@@ -455,7 +537,7 @@
         </a>
 
 
-        <!-- HOBBIES CARD -->
+        <!-- HOBBIES -->
 
         <a href="hobbies.html" class="card">
 
@@ -501,6 +583,7 @@
 
         <p>
           <strong>Phone:</strong>
+
           <a href="tel:+12817065568">
             281-706-5568
           </a>
@@ -508,6 +591,7 @@
 
         <p>
           <strong>Email:</strong>
+
           <a href="mailto:alexanderlam32@gmail.com">
             alexanderlam32@gmail.com
           </a>
