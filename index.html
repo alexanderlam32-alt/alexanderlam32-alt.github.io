@@ -3,77 +3,246 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Engineering Portfolio</title>
+  <title>Alex Lam | Mechanical Engineering</title>
+
   <style>
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background: #f4f5f7;
-      color: #222;
+      font-family: Arial, sans-serif;
+      color: #243247;
+      background: #f7f9fc;
+      line-height: 1.7;
     }
-    header {
-      background: #17243a;
-      color: white;
-      text-align: center;
-      padding: 65px 20px;
-    }
+
     nav {
-      background: #263750;
-      padding: 18px;
-      text-align: center;
+      background: #10233d;
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
     }
-    nav a {
+
+    .logo {
       color: white;
-      margin: 0 15px;
+      font-size: 22px;
+      font-weight: bold;
       text-decoration: none;
     }
-    main {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
+
+    nav a {
+      color: #e1e9f3;
+      text-decoration: none;
+      margin-left: 20px;
     }
-    .project {
+
+    nav a:hover { color: #7db8ff; }
+
+    .hero {
+      background: linear-gradient(135deg, #10233d, #244a72);
+      color: white;
+      text-align: center;
+      padding: 110px 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 6vw, 64px);
+      margin: 0;
+    }
+
+    .hero p {
+      font-size: 19px;
+      color: #dce7f5;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 12px 26px;
+      background: #ffffff;
+      color: #10233d;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 1050px;
+      margin: auto;
+      padding: 75px 25px;
+    }
+
+    h2 {
+      font-size: 32px;
+      color: #10233d;
+      margin-top: 0;
+    }
+
+    .about {
       background: white;
-      padding: 25px;
-      margin: 20px 0;
+    }
+
+    .about p {
+      max-width: 800px;
+      font-size: 17px;
+    }
+
+    .availability {
+      margin-top: 28px;
+      padding: 15px 20px;
+      border-left: 4px solid #2768a8;
+      background: #eef5fc;
+      font-weight: bold;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(
+        auto-fit, minmax(250px, 1fr)
+      );
+      gap: 24px;
+      margin-top: 30px;
+    }
+
+    .project-card {
+      background: white;
+      border: 1px solid #e4e9ef;
       border-radius: 10px;
+      padding: 28px;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.04);
+    }
+
+    .project-card h3 {
+      color: #10233d;
+      margin-top: 0;
+    }
+
+    footer {
+      background: #10233d;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    footer a { color: #b9d8ff; }
+
+    @media (max-width: 600px) {
+      nav { justify-content: center; }
+      nav a { margin: 0 8px; }
+      .hero { padding: 75px 20px; }
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <h1>Alexander Lam | Engineering Portfolio</h1>
-    <p>Mechanical Engineering | CAD | Robotics</p>
-  </header>
 
   <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
+    <a class="logo" href="#home">Alex Lam</a>
+    <div>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
   </nav>
 
-  <main>
-    <section id="about">
+  <header class="hero" id="home">
+    <h1>Alex Lam</h1>
+    <p>
+      Honors Mechanical Engineering Student
+      | University of Houston
+    </p>
+    <a class="button" href="#projects">
+      Explore My Projects
+    </a>
+  </header>
+
+  <section class="about" id="about">
+    <div class="container">
       <h2>About Me</h2>
-      <p>Welcome to my engineering portfolio!</p>
-    </section>
 
-    <section id="projects">
-      <h2>My Projects</h2>
-      <div class="project">
-        <h3>Formula SAE Suspension Design</h3>
-        <p>CAD modeling, analysis, and design.</p>
-      </div>
-      <div class="project">
-        <h3>Robotics Projects</h3>
-        <p>Mechanical design and prototyping.</p>
-      </div>
-    </section>
+      <p><strong>Hey there, I'm Alex!</strong></p>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Connect with me on LinkedIn.</p>
-    </section>
-  </main>
+      <p>
+        I'm a Second Year Honors Mechanical
+        Engineering student at the University
+        of Houston with hands-on experience
+        in design, analysis, and rapid
+        prototyping.
+      </p>
+
+      <p>
+        I'm particularly interested in
+        aerospace systems, energy technologies,
+        and applied mechanical design, where
+        I can combine analytical work with
+        real-world testing and iteration.
+      </p>
+
+      <p>
+        Take a look at some of my projects!
+      </p>
+
+      <div class="availability">
+        Currently seeking internship
+        opportunities for Summer 2027
+      </div>
+    </div>
+  </section>
+
+  <section class="container" id="projects">
+    <h2>Featured Projects</h2>
+    <p>
+      A selection of my engineering design,
+      analysis, and prototyping work.
+    </p>
+
+    <div class="project-grid">
+
+      <div class="project-card">
+        <h3>Formula SAE Suspension</h3>
+        <p>
+          Suspension geometry, control arm
+          design, CAD modeling, and
+          structural analysis.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <h3>Robotics & Prototyping</h3>
+        <p>
+          Mechanical mechanisms, Arduino
+          control systems, and
+          rapid prototyping.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <h3>Engineering Analysis</h3>
+        <p>
+          Mechanical design calculations,
+          simulation, and engineering
+          problem-solving.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p>Alex Lam | Mechanical Engineering</p>
+    <p>University of Houston</p>
+    <p>
+      <a href="https://github.com/alexanderlam32-alt">
+        GitHub
+      </a>
+    </p>
+  </footer>
+
 </body>
 </html>
