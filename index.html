@@ -65,7 +65,7 @@
       color: #7db8ff;
     }
 
-    /* HERO SECTION WITH FSAE BACKGROUND */
+    /* HERO SECTION */
 
     .hero {
       position: relative;
@@ -144,7 +144,7 @@
     /* GENERAL LAYOUT */
 
     .container {
-      max-width: 1100px;
+      max-width: 1300px;
       margin: auto;
       padding: 75px 25px;
     }
@@ -162,31 +162,47 @@
       background: white;
     }
 
+    .about .container {
+      max-width: 1400px;
+      padding: 45px 35px;
+    }
+
+    .about-layout {
+      display: grid;
+      grid-template-columns:
+        minmax(0, 517fr) minmax(0, 699fr);
+      gap: 43px;
+      align-items: start;
+    }
+
+    .about-photo {
+      width: 100%;
+      aspect-ratio: 517 / 490;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
     .about-content {
-      max-width: 850px;
+      padding-top: 14px;
     }
 
-    .about p {
-      font-size: 17px;
+    .about-content h2 {
+      font-size: 42px;
+      color: #000000;
+      margin-bottom: 35px;
+      line-height: 1.2;
+    }
+
+    .about-content p {
+      font-size: 20px;
+      line-height: 1.7;
+      color: #000000;
+      margin: 0 0 20px;
+    }
+
+    .about-content .intro {
       margin-bottom: 20px;
-    }
-
-    .intro {
-      font-size: 23px !important;
-      font-weight: bold;
-      color: #10233d;
-    }
-
-    .availability {
-      margin-top: 30px;
-      padding: 17px 22px;
-
-      background: #eef5fc;
-      border-left: 4px solid #2768a8;
-      border-radius: 4px;
-
-      font-weight: bold;
-      color: #17395b;
     }
 
     /* PORTFOLIO SECTION */
@@ -203,10 +219,8 @@
 
     .card-grid {
       display: grid;
-
       grid-template-columns:
         repeat(3, minmax(0, 1fr));
-
       gap: 25px;
     }
 
@@ -328,6 +342,25 @@
       font-size: 14px;
     }
 
+    /* TABLET RESPONSIVENESS */
+
+    @media (max-width: 1000px) {
+
+      .about-layout {
+        gap: 30px;
+      }
+
+      .about-content h2 {
+        font-size: 34px;
+        margin-bottom: 20px;
+      }
+
+      .about-content p {
+        font-size: 17px;
+      }
+
+    }
+
     /* MOBILE RESPONSIVENESS */
 
     @media (max-width: 800px) {
@@ -352,6 +385,28 @@
 
       .container {
         padding: 55px 20px;
+      }
+
+      .about .container {
+        padding: 40px 20px;
+      }
+
+      .about-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .about-photo {
+        max-width: 520px;
+        margin: auto;
+      }
+
+      .about-content {
+        padding-top: 0;
+      }
+
+      .about-content h2 {
+        font-size: 32px;
       }
 
       nav {
@@ -434,37 +489,50 @@
 
     <div class="container">
 
-      <div class="about-content">
+      <div class="about-layout">
 
-        <h2>About Me</h2>
+        <!-- HEADSHOT ON LEFT -->
 
-        <p class="intro">
-          Hey there, I'm Alex!
-        </p>
+        <img
+          src="Headshot.png"
+          alt="Alexander Lam"
+          class="about-photo">
 
-        <p>
-          I'm a Second Year Honors Mechanical
-          Engineering student at the University
-          of Houston with hands-on experience
-          in design, analysis, and rapid
-          prototyping.
-        </p>
+        <!-- BIOGRAPHY ON RIGHT -->
 
-        <p>
-          I'm particularly interested in
-          aerospace systems, energy technologies,
-          and applied mechanical design, where
-          I can combine analytical work with
-          real-world testing and iteration.
-        </p>
+        <div class="about-content">
 
-        <p>
-          Take a look at some of my projects!
-        </p>
+          <h2>About Me</h2>
 
-        <div class="availability">
-          Currently seeking co-op
-          opportunities for Fall 2027 or Spring 2028.
+          <p class="intro">
+            Hey there, I'm Alex!
+          </p>
+
+          <p>
+            I'm a Second Year Honors Mechanical
+            Engineering student at the University
+            of Houston with hands-on experience
+            in design, analysis, and rapid
+            prototyping.
+          </p>
+
+          <p>
+            I'm particularly interested in
+            aerospace systems, energy technologies,
+            and applied mechanical design, where
+            I can combine analytical work with
+            real-world testing and iteration.
+          </p>
+
+          <p>
+            Take a look at some of my projects!
+          </p>
+
+          <p>
+            Currently seeking internship
+            opportunities for the Summer of 2027
+          </p>
+
         </div>
 
       </div>
