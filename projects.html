@@ -1,0 +1,461 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Projects | Alexander Lam</title>
+
+  <style>
+
+    /* GENERAL STYLING */
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f9fc;
+      color: #243247;
+      line-height: 1.6;
+    }
+
+    /* NAVIGATION BAR */
+
+    nav {
+      background: #10233d;
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .logo {
+      color: white;
+      font-size: 22px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+    }
+
+    .nav-links a {
+      color: #e1e9f3;
+      text-decoration: none;
+      font-size: 15px;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #7db8ff;
+    }
+
+    /* PAGE HEADER */
+
+    .page-header {
+      background: linear-gradient(
+        135deg,
+        #10233d,
+        #244a72
+      );
+
+      color: white;
+      text-align: center;
+      padding: 65px 20px;
+    }
+
+    .page-header h1 {
+      font-size: clamp(34px, 5vw, 48px);
+      margin: 0;
+    }
+
+    .page-header p {
+      font-size: 17px;
+      color: #dce7f5;
+      margin-top: 10px;
+    }
+
+    /* PROJECT CONTAINER */
+
+    .project-container {
+      max-width: 1400px;
+      margin: 45px auto;
+      padding: 0 25px;
+    }
+
+    /* PROJECT TITLE */
+
+    .project-title {
+      background: #f0effa;
+      text-align: center;
+      padding: 12px 20px;
+      margin-bottom: 15px;
+    }
+
+    .project-title h2 {
+      font-size: 28px;
+      font-weight: 500;
+      color: #111111;
+      letter-spacing: 1px;
+      margin: 0;
+      text-transform: uppercase;
+    }
+
+    /* PROJECT IMAGES */
+
+    .project-images {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .project-images img {
+      width: 100%;
+      height: 310px;
+      object-fit: contain;
+      background: #f0effa;
+      border: 4px solid #f0effa;
+      display: block;
+    }
+
+    /* PROJECT DESCRIPTION */
+
+    .project-details {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .detail-column h3 {
+      font-size: 19px;
+      font-weight: 700;
+      color: #111111;
+      margin: 0 0 4px;
+    }
+
+    .detail-column ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    .detail-column li {
+      font-size: 16px;
+      color: #30364f;
+      line-height: 1.65;
+      margin-bottom: 8px;
+      letter-spacing: 0.3px;
+    }
+
+    .detail-column strong {
+      color: #181d35;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #10233d;
+      color: #dce7f5;
+      text-align: center;
+      padding: 25px 20px;
+      font-size: 14px;
+      margin-top: 70px;
+    }
+
+    /* TABLET */
+
+    @media (max-width: 1000px) {
+
+      .project-images img {
+        height: 240px;
+      }
+
+      .project-details {
+        gap: 15px;
+      }
+
+      .detail-column li {
+        font-size: 14px;
+      }
+
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+
+      nav {
+        justify-content: center;
+      }
+
+      .nav-links {
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .project-container {
+        padding: 0 18px;
+        margin: 30px auto;
+      }
+
+      .project-title h2 {
+        font-size: 21px;
+      }
+
+      .project-images {
+        grid-template-columns: 1fr;
+      }
+
+      .project-images img {
+        height: auto;
+        max-height: 400px;
+      }
+
+      .project-details {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .detail-column li {
+        font-size: 16px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION BAR -->
+
+  <nav>
+
+    <a class="logo" href="index.html">
+      Alexander Lam
+    </a>
+
+    <div class="nav-links">
+
+      <a href="index.html">Home</a>
+
+      <a href="index.html#about">About Me</a>
+
+      <a href="projects.html">Projects</a>
+
+      <a href="experience.html">
+        Work Experience
+      </a>
+
+      <a href="hobbies.html">Hobbies</a>
+
+      <a href="index.html#contact">Contact</a>
+
+    </div>
+
+  </nav>
+
+
+  <!-- PAGE HEADER -->
+
+  <header class="page-header">
+
+    <h1>Engineering Projects</h1>
+
+    <p>
+      Mechanical Design | CAD | Analysis | Prototyping
+    </p>
+
+  </header>
+
+
+  <!-- PROJECT 1 -->
+
+  <main class="project-container">
+
+    <section class="project">
+
+      <!-- PROJECT TITLE -->
+
+      <div class="project-title">
+
+        <h2>FSAE Steering Rack Protection</h2>
+
+      </div>
+
+
+      <!-- THREE PROJECT IMAGES -->
+
+      <div class="project-images">
+
+        <img
+          src="Rack1.png"
+          alt="Steering rack protection CAD design">
+
+        <img
+          src="Rack2.png"
+          alt="Steering rack protection assembly">
+
+        <img
+          src="RackReal.png"
+          alt="Manufactured steering rack protection">
+
+      </div>
+
+
+      <!-- PROJECT DETAILS -->
+
+      <div class="project-details">
+
+        <!-- WHAT -->
+
+        <div class="detail-column">
+
+          <h3>What?</h3>
+
+          <ul>
+
+            <li>
+              Formula SAE car did not meet
+              applicable <strong>SAE International
+              safety regulations</strong>
+              regarding steering system protection
+              and risked disqualification.
+            </li>
+
+            <li>
+              Exposed <strong>steering rack and
+              brake lines</strong> presented
+              potential driver entanglement
+              hazards.
+            </li>
+
+            <li>
+              Vehicle exceeded its
+              <strong>design target weight</strong>,
+              requiring a lightweight solution
+              that minimized additional mass.
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <!-- HOW -->
+
+        <div class="detail-column">
+
+          <h3>How?</h3>
+
+          <ul>
+
+            <li>
+              Evaluated <strong>steering rack
+              geometry, brake line routing,
+              and surrounding chassis
+              components</strong> to identify
+              potential interference points.
+            </li>
+
+            <li>
+              Designed around existing
+              <strong>mounting locations and
+              packaging constraints</strong>
+              to optimize geometry.
+            </li>
+
+            <li>
+              Developed a <strong>protective
+              cover in SolidWorks</strong> to
+              isolate steering and brake
+              components from the driver.
+            </li>
+
+            <li>
+              Manufactured the protective
+              piece from <strong>carbon steel
+              sheet metal</strong>, utilizing
+              tools such as <strong>angle grinders
+              and sheet metal brakes</strong>.
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <!-- RESULTS -->
+
+        <div class="detail-column">
+
+          <h3>Results</h3>
+
+          <ul>
+
+            <li>
+              Designed a <strong>lightweight
+              steering rack protection
+              solution</strong> that ensured
+              SAE regulatory compliance,
+              contributing to the vehicle
+              <strong>passing technical inspection
+              for the first time in five years</strong>.
+            </li>
+
+            <li>
+              <strong>Eliminated potential driver
+              exposure</strong> to moving steering
+              components and brake lines.
+            </li>
+
+            <li>
+              <strong>Reduced additional vehicle
+              mass by 50%</strong> by selecting
+              a lightweight mounting solution
+              over an alternative requiring
+              welded mounting points.
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      Alexander Lam | Mechanical Engineering
+    </p>
+
+    <p>
+      University of Houston
+    </p>
+
+  </footer>
+
+</body>
+</html>
