@@ -86,7 +86,7 @@
       padding: 0 25px;
     }
 
-    /* PROJECT HEADINGS - CENTERED */
+    /* CENTERED PROJECT HEADINGS */
 
     .project-heading {
       background: #f0effa;
@@ -109,7 +109,7 @@
       margin: 0;
     }
 
-    /* PROJECT IMAGES */
+    /* PROJECT IMAGE GALLERIES */
 
     .project-images {
       display: grid;
@@ -136,10 +136,20 @@
       display: block;
     }
 
-    /* THREE-IMAGE PROJECTS */
+    /* THREE-COLUMN MEDIA GALLERIES */
 
     .project-images.three-images {
       grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    /* VIDEO IN CENTER OF PONG GALLERY */
+
+    .project-image video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      background: #000;
     }
 
     /* PROJECT DETAILS */
@@ -171,7 +181,7 @@
       line-height: 1.65;
     }
 
-    /* SECTION DIVIDER */
+    /* DIVIDERS BETWEEN PROJECTS */
 
     .project-divider {
       height: 3px;
@@ -291,7 +301,7 @@
 
   <main class="project-container">
 
-    <!-- PROJECT 1: STEERING RACK PROTECTION -->
+    <!-- PROJECT 1: FSAE STEERING RACK PROTECTION -->
 
     <section class="project">
 
@@ -423,14 +433,155 @@
         </div>
 
       </div>
-
     </section>
 
-    <!-- SECTION DIVIDER -->
+    <!-- DIVIDER 1 -->
 
     <div class="project-divider" aria-hidden="true"></div>
 
-    <!-- PROJECT 2: CLIMATE TREND ANALYSIS MODEL -->
+    <!-- PROJECT 2: PONG WARS -->
+
+    <section class="project">
+
+      <div class="project-heading">
+        <h2>Pong Wars</h2>
+        <p class="project-date">April 2025</p>
+      </div>
+
+      <!-- LEFT IMAGE / CENTER VIDEO / RIGHT IMAGE -->
+
+      <div class="project-images three-images">
+
+        <figure class="project-image">
+          <img
+            src="Pong1.png"
+            alt="Pong Wars MATLAB game screenshot"
+            loading="lazy">
+        </figure>
+
+        <figure class="project-image">
+          <video
+            controls
+            playsinline
+            preload="metadata"
+            aria-label="Pong Wars gameplay demonstration">
+            <source src="Pong.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+        </figure>
+
+        <figure class="project-image">
+          <img
+            src="Pong2.png"
+            alt="Pong Wars gameplay modes and interface"
+            loading="lazy">
+        </figure>
+
+      </div>
+
+      <div class="project-details">
+
+        <!-- WHAT -->
+
+        <div class="project-column">
+          <h3>What?</h3>
+
+          <ul>
+            <li>
+              Developed a <strong>Star Wars-inspired Pong
+              game in MATLAB</strong> featuring single-player
+              and multiplayer gameplay.
+            </li>
+
+            <li>
+              Designed three unique gameplay modes:
+              <strong>Fast Ball, Shrinking Paddle, and
+              Double Ball</strong> to introduce varying
+              levels of difficulty.
+            </li>
+
+            <li>
+              Explored <strong>mathematical modeling and
+              collision physics</strong> to simulate dynamic
+              ball movement and interactive gameplay.
+            </li>
+          </ul>
+        </div>
+
+        <!-- HOW -->
+
+        <div class="project-column">
+          <h3>How?</h3>
+
+          <ul>
+            <li>
+              Implemented <strong>position-based paddle
+              tracking algorithms</strong> to automatically
+              control the opposing paddle in single-player
+              mode, alongside independent keyboard controls
+              for multiplayer.
+            </li>
+
+            <li>
+              Programmed <strong>physics-based collision
+              detection</strong> to simulate ball reflections
+              against walls and paddles, including
+              ball-to-ball collisions and velocity exchanges
+              in Double Ball mode.
+            </li>
+
+            <li>
+              Developed custom gameplay mechanics involving
+              <strong>increased ball velocity and shrinking
+              paddle dimensions</strong> to dynamically
+              adjust difficulty.
+            </li>
+
+            <li>
+              Designed a <strong>Star Wars-themed graphical
+              interface</strong> featuring custom visuals,
+              real-time score tracking, and win conditions.
+            </li>
+          </ul>
+        </div>
+
+        <!-- RESULTS -->
+
+        <div class="project-column">
+          <h3>Results</h3>
+
+          <ul>
+            <li>
+              Successfully developed a fully functional
+              Pong game featuring
+              <strong>two player configurations and three
+              distinct gameplay modes</strong>.
+            </li>
+
+            <li>
+              Implemented <strong>mathematical ball-tracking
+              algorithms and physics-based collision
+              mechanics</strong> to enable automated paddle
+              control and dynamic ball interactions.
+            </li>
+
+            <li>
+              <strong>Increased average play session duration
+              by 50%</strong> across alternative gameplay
+              modes compared with standard single-player
+              mode, as demonstrated through user playtesting.
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- DIVIDER 2 -->
+
+    <div class="project-divider" aria-hidden="true"></div>
+
+    <!-- PROJECT 3: CLIMATE TREND ANALYSIS MODEL -->
 
     <section class="project">
 
@@ -561,7 +712,6 @@
         </div>
 
       </div>
-
     </section>
 
   </main>
