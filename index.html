@@ -54,10 +54,7 @@
     .hero {
       min-height: 580px;
       background:
-        linear-gradient(
-          rgba(9,24,43,.58),
-          rgba(9,24,43,.65)
-        ),
+        linear-gradient(rgba(9,24,43,.58), rgba(9,24,43,.65)),
         url("fsae-car.png") center / cover no-repeat;
       display: flex;
       align-items: center;
@@ -90,6 +87,14 @@
 
     .hero-button:hover { background: #dce7f5; }
 
+    /* SHARED SECTION HEADINGS */
+    .section-heading {
+      text-align: center;
+      color: #10233d;
+      font-size: 34px;
+      margin: 0 0 40px;
+    }
+
     /* ABOUT ME */
     .about {
       background: white;
@@ -113,10 +118,10 @@
       border-radius: 5px;
     }
 
-    .about-text h2 {
-      font-size: 34px;
+    .about-text h3 {
+      font-size: 30px;
       color: #10233d;
-      margin-top: 0;
+      margin: 0 0 18px;
     }
 
     .about-text p {
@@ -138,17 +143,10 @@
       border-radius: 3px;
     }
 
-    /* FUN PICS - VERTICAL STACK */
+    /* FUN PICS */
     .gallery-section {
       background: white;
       padding: 55px 8% 80px;
-    }
-
-    .section-heading {
-      text-align: center;
-      color: #10233d;
-      font-size: 34px;
-      margin: 0 0 40px;
     }
 
     .gallery-container {
@@ -308,10 +306,7 @@
         gap: 35px;
       }
 
-      .gallery-photo img {
-        max-height: 480px;
-      }
-
+      .gallery-photo img { max-height: 480px; }
       .portfolio-grid { gap: 15px; }
     }
 
@@ -334,11 +329,10 @@
         gap: 25px;
       }
 
+      .about-text h3 { font-size: 27px; }
       .section-divider { padding: 0 6%; }
 
-      .gallery-section {
-        padding: 45px 6% 60px;
-      }
+      .gallery-section { padding: 45px 6% 60px; }
 
       .gallery-container {
         max-width: 100%;
@@ -356,7 +350,6 @@
       .portfolio-grid { grid-template-columns: 1fr; }
 
       .contact { padding: 55px 6%; }
-
       .social-links { gap: 12px; }
 
       .contact .social-bubble {
@@ -399,6 +392,9 @@
 
   <!-- ABOUT ME -->
   <section class="about" id="about">
+
+    <h2 class="section-heading">About Me</h2>
+
     <div class="about-container">
 
       <div class="about-photo">
@@ -406,7 +402,7 @@
       </div>
 
       <div class="about-text">
-        <h2>Hey there, I'm Alex!</h2>
+        <h3>Hey there, I'm Alex!</h3>
 
         <p>
           I'm a Second Year Honors Mechanical Engineering
@@ -447,7 +443,6 @@
 
     <div class="gallery-container">
 
-      <!-- TEAM PHOTO -->
       <figure class="gallery-photo">
         <img
           src="Team.jpg"
@@ -459,7 +454,6 @@
         </figcaption>
       </figure>
 
-      <!-- SHOP PHOTO -->
       <figure class="gallery-photo">
         <img
           src="Shop.png"
@@ -471,7 +465,6 @@
         </figcaption>
       </figure>
 
-      <!-- DESIGN REVIEW PHOTO -->
       <figure class="gallery-photo">
         <img
           src="Review.JPG"
@@ -491,6 +484,7 @@
     <h2 class="section-heading">My Portfolio</h2>
 
     <div class="portfolio-grid">
+
       <a class="portfolio-card" href="projects.html">
         <h3>Projects</h3>
         <p>
@@ -514,6 +508,7 @@
           outside of engineering.
         </p>
       </a>
+
     </div>
   </section>
 
