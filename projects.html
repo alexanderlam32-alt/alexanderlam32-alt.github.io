@@ -1,12 +1,18 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
   <title>Projects | Alexander Lam</title>
 
   <style>
+
+    /* GENERAL STYLING */
+
     * {
       box-sizing: border-box;
     }
@@ -52,7 +58,6 @@
       color: #e1e9f3;
       text-decoration: none;
       font-size: 15px;
-      transition: color 0.2s;
     }
 
     .nav-links a:hover {
@@ -62,7 +67,12 @@
     /* PAGE HEADER */
 
     .page-header {
-      background: linear-gradient(135deg, #10233d, #244a72);
+      background: linear-gradient(
+        135deg,
+        #10233d,
+        #244a72
+      );
+
       color: white;
       text-align: center;
       padding: 65px 20px;
@@ -113,18 +123,18 @@
       margin: 5px 0 0;
     }
 
-    /* PROJECT IMAGES */
+    /* FOUR PROJECT IMAGES */
 
     .project-images {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
       margin-bottom: 18px;
     }
 
     .project-images img {
       width: 100%;
-      height: 310px;
+      height: 270px;
       object-fit: contain;
       background: #f0effa;
       border: 4px solid #f0effa;
@@ -135,7 +145,7 @@
 
     .project-details {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 25px;
     }
 
@@ -177,8 +187,13 @@
     /* TABLET */
 
     @media (max-width: 1000px) {
+
+      .project-images {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
       .project-images img {
-        height: 240px;
+        height: 260px;
       }
 
       .project-details {
@@ -188,11 +203,13 @@
       .detail-column li {
         font-size: 14px;
       }
+
     }
 
     /* MOBILE */
 
     @media (max-width: 700px) {
+
       nav {
         justify-content: center;
       }
@@ -228,7 +245,9 @@
       .detail-column li {
         font-size: 16px;
       }
+
     }
+
   </style>
 </head>
 
@@ -237,24 +256,44 @@
   <!-- NAVIGATION BAR -->
 
   <nav>
-    <a class="logo" href="index.html">Alexander Lam</a>
+
+    <a class="logo" href="index.html">
+      Alexander Lam
+    </a>
 
     <div class="nav-links">
+
       <a href="index.html">Home</a>
+
       <a href="index.html#about">About Me</a>
+
       <a href="projects.html">Projects</a>
-      <a href="experience.html">Work Experience</a>
+
+      <a href="experience.html">
+        Work Experience
+      </a>
+
       <a href="hobbies.html">Hobbies</a>
+
       <a href="index.html#contact">Contact</a>
+
     </div>
+
   </nav>
+
 
   <!-- PAGE HEADER -->
 
   <header class="page-header">
+
     <h1>Engineering Projects</h1>
-    <p>Mechanical Design | CAD | Analysis | Prototyping</p>
+
+    <p>
+      Mechanical Design | CAD | Analysis | Prototyping
+    </p>
+
   </header>
+
 
   <!-- PROJECT 1 -->
 
@@ -265,25 +304,42 @@
       <!-- PROJECT TITLE AND DATE -->
 
       <div class="project-title">
+
         <h2>FSAE Steering Rack Protection</h2>
-        <p class="project-date">April 2025</p>
+
+        <p class="project-date">
+          April 2025
+        </p>
+
       </div>
 
-      <!-- PROJECT IMAGES -->
+
+      <!-- FOUR PROJECT IMAGES -->
 
       <div class="project-images">
+
         <img
           src="Rack1.png"
-          alt="Steering rack protection CAD design">
+          alt="Steering rack protection CAD design"
+          loading="lazy">
 
         <img
           src="Rack2.png"
-          alt="Steering rack protection assembly">
+          alt="Steering rack protection assembly"
+          loading="lazy">
 
         <img
           src="RackReal.png"
-          alt="Manufactured steering rack protection">
+          alt="Manufactured steering rack protection"
+          loading="lazy">
+
+        <img
+          src="Floor.jpg"
+          alt="Additional steering rack protection project photo"
+          loading="lazy">
+
       </div>
+
 
       <!-- PROJECT DETAILS -->
 
@@ -292,93 +348,116 @@
         <!-- WHAT -->
 
         <div class="detail-column">
+
           <h3>What?</h3>
 
           <ul>
+
             <li>
-              Formula SAE car did not meet applicable
-              <strong>SAE International safety regulations</strong>
-              regarding steering system protection and
-              risked disqualification.
+              Formula SAE car did not meet
+              applicable <strong>SAE International
+              safety regulations</strong>
+              regarding steering system protection
+              and risked disqualification.
             </li>
 
             <li>
-              Exposed <strong>steering rack and brake lines</strong>
-              presented potential driver entanglement hazards.
+              Exposed <strong>steering rack and
+              brake lines</strong> presented
+              potential driver entanglement
+              hazards.
             </li>
 
             <li>
               Vehicle exceeded its
               <strong>design target weight</strong>,
-              requiring a lightweight solution that
-              minimized additional mass.
+              requiring a lightweight solution
+              that minimized additional mass.
             </li>
+
           </ul>
+
         </div>
+
 
         <!-- HOW -->
 
         <div class="detail-column">
+
           <h3>How?</h3>
 
           <ul>
+
             <li>
-              Evaluated <strong>steering rack geometry,
-              brake line routing, and surrounding chassis
-              components</strong> to identify potential
-              interference points.
+              Evaluated <strong>steering rack
+              geometry, brake line routing,
+              and surrounding chassis
+              components</strong> to identify
+              potential interference points.
             </li>
 
             <li>
               Designed around existing
-              <strong>mounting locations and packaging
-              constraints</strong> to optimize geometry.
+              <strong>mounting locations and
+              packaging constraints</strong>
+              to optimize geometry.
             </li>
 
             <li>
-              Developed a
-              <strong>protective cover in SolidWorks</strong>
-              to isolate steering and brake components
-              from the driver.
+              Developed a <strong>protective
+              cover in SolidWorks</strong> to
+              isolate steering and brake
+              components from the driver.
             </li>
 
             <li>
-              Manufactured the protective piece from
-              <strong>carbon steel sheet metal</strong>,
-              utilizing tools such as
-              <strong>angle grinders and sheet metal brakes</strong>.
+              Manufactured the protective
+              piece from <strong>carbon steel
+              sheet metal</strong>, utilizing
+              tools such as <strong>angle grinders
+              and sheet metal brakes</strong>.
             </li>
+
           </ul>
+
         </div>
+
 
         <!-- RESULTS -->
 
         <div class="detail-column">
+
           <h3>Results</h3>
 
           <ul>
+
             <li>
-              Designed a
-              <strong>lightweight steering rack protection
-              solution</strong> that ensured SAE regulatory
-              compliance, contributing to the vehicle
-              <strong>passing technical inspection for the
-              first time in five years</strong>.
+              Designed a <strong>lightweight
+              steering rack protection
+              solution</strong> that ensured
+              SAE regulatory compliance,
+              contributing to the vehicle
+              <strong>passing technical inspection
+              for the first time in five years</strong>.
             </li>
 
             <li>
-              <strong>Eliminated potential driver exposure</strong>
-              to moving steering components and brake lines.
+              <strong>Eliminated potential driver
+              exposure</strong> to moving steering
+              components and brake lines.
             </li>
 
             <li>
               Achieved a final component weight of
-              <strong>1.8 lbs</strong>, reducing additional
-              vehicle mass by <strong>50%</strong> compared
-              to an alternative design requiring welded
+              <strong>1.8 lbs</strong>, reducing
+              additional vehicle mass by
+              <strong>50%</strong> compared to an
+              alternative design requiring welded
               mounting points.
             </li>
+
           </ul>
+
         </div>
 
       </div>
@@ -387,11 +466,19 @@
 
   </main>
 
+
   <!-- FOOTER -->
 
   <footer>
-    <p>Alexander Lam | Mechanical Engineering</p>
-    <p>University of Houston</p>
+
+    <p>
+      Alexander Lam | Mechanical Engineering
+    </p>
+
+    <p>
+      University of Houston
+    </p>
+
   </footer>
 
 </body>
