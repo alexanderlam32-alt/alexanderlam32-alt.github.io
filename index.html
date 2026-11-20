@@ -5,15 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alexander Lam | Mechanical Engineering</title>
-
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -54,9 +49,7 @@
       font-size: 15px;
     }
 
-    .nav-links a:hover {
-      color: #7db8ff;
-    }
+    .nav-links a:hover { color: #7db8ff; }
 
     /* HERO */
 
@@ -68,7 +61,6 @@
           rgba(9, 24, 43, 0.65)
         ),
         url("fsae-car.png") center / cover no-repeat;
-
       display: flex;
       align-items: center;
       justify-content: center;
@@ -98,9 +90,7 @@
       text-decoration: none;
     }
 
-    .hero-button:hover {
-      background: #dce7f5;
-    }
+    .hero-button:hover { background: #dce7f5; }
 
     /* ABOUT ME */
 
@@ -160,11 +150,11 @@
     }
 
     .gallery-container {
-      max-width: 1080px;
+      max-width: 1150px;
       margin: auto;
       display: grid;
-      grid-template-columns: 0.9fr 2.1fr;
-      gap: 14px;
+      grid-template-columns: 1fr 3fr;
+      gap: 12px;
       align-items: stretch;
     }
 
@@ -206,8 +196,8 @@
     .gallery-right {
       display: grid;
       grid-template-rows: 1fr 1fr;
-      gap: 14px;
-      height: 650px;
+      gap: 12px;
+      height: 760px;
     }
 
     .gallery-right .gallery-card {
@@ -294,9 +284,7 @@
       text-decoration: none;
     }
 
-    .contact a:hover {
-      text-decoration: underline;
-    }
+    .contact a:hover { text-decoration: underline; }
 
     /* LINKEDIN AND GITHUB BUBBLES */
 
@@ -355,59 +343,41 @@
     /* TABLET */
 
     @media (max-width: 900px) {
-      .about-container {
-        gap: 30px;
-      }
+      .about-container { gap: 30px; }
 
       .gallery-container {
         max-width: 800px;
+        grid-template-columns: 1fr 2.5fr;
       }
 
-      .gallery-right {
-        height: 520px;
-      }
+      .gallery-right { height: 580px; }
 
-      .portfolio-grid {
-        gap: 15px;
-      }
+      .portfolio-grid { gap: 15px; }
     }
 
     /* MOBILE */
 
     @media (max-width: 700px) {
-      nav {
-        justify-content: center;
-      }
+      nav { justify-content: center; }
 
       .nav-links {
         justify-content: center;
         gap: 14px;
       }
 
-      .hero {
-        min-height: 480px;
-      }
+      .hero { min-height: 480px; }
+      .hero p { font-size: 16px; }
 
-      .hero p {
-        font-size: 16px;
-      }
-
-      .about {
-        padding: 55px 6% 35px;
-      }
+      .about { padding: 55px 6% 35px; }
 
       .about-container {
         grid-template-columns: 1fr;
         gap: 25px;
       }
 
-      .section-divider {
-        padding: 0 6%;
-      }
+      .section-divider { padding: 0 6%; }
 
-      .gallery-section {
-        padding: 28px 6% 45px;
-      }
+      .gallery-section { padding: 28px 6% 45px; }
 
       .gallery-container {
         grid-template-columns: 1fr;
@@ -429,26 +399,18 @@
       }
 
       .gallery-right .gallery-card img {
-        height: 270px;
+        height: 300px;
         flex: none;
         object-fit: contain;
       }
 
-      .portfolio {
-        padding: 55px 6%;
-      }
+      .portfolio { padding: 55px 6%; }
 
-      .portfolio-grid {
-        grid-template-columns: 1fr;
-      }
+      .portfolio-grid { grid-template-columns: 1fr; }
 
-      .contact {
-        padding: 55px 6%;
-      }
+      .contact { padding: 55px 6%; }
 
-      .social-links {
-        gap: 12px;
-      }
+      .social-links { gap: 12px; }
 
       .contact .social-bubble {
         padding: 11px 20px;
@@ -496,9 +458,7 @@
     <div class="about-container">
 
       <div class="about-photo">
-        <img
-          src="Headshot.png"
-          alt="Alexander Lam headshot">
+        <img src="Headshot.png" alt="Alexander Lam headshot">
       </div>
 
       <div class="about-text">
@@ -540,9 +500,8 @@
 
   <!-- PHOTO GALLERY -->
 
-  <section
-    class="gallery-section"
-    aria-label="Formula SAE photo gallery">
+  <section class="gallery-section"
+           aria-label="Formula SAE photo gallery">
 
     <div class="gallery-container">
 
@@ -594,7 +553,6 @@
   <!-- PORTFOLIO CARDS -->
 
   <section class="portfolio" id="portfolio">
-
     <h2 class="section-heading">My Portfolio</h2>
 
     <div class="portfolio-grid">
@@ -624,20 +582,16 @@
       </a>
 
     </div>
-
   </section>
 
   <!-- CONTACT -->
 
   <section class="contact" id="contact">
-
     <h2>Contact Me</h2>
 
     <p>
       Phone:
-      <a href="tel:2817065568">
-        281-706-5568
-      </a>
+      <a href="tel:2817065568">281-706-5568</a>
     </p>
 
     <p>
@@ -682,7 +636,6 @@
       </a>
 
     </div>
-
   </section>
 
   <!-- FOOTER -->
