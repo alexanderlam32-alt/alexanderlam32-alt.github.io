@@ -5,16 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alexander Lam | Mechanical Engineering</title>
-
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
@@ -22,9 +15,6 @@
       color: #243247;
       line-height: 1.6;
     }
-
-    /* NAVIGATION */
-
     nav {
       background: #10233d;
       padding: 18px 8%;
@@ -34,41 +24,30 @@
       flex-wrap: wrap;
       gap: 15px;
     }
-
     .logo {
       color: white;
       font-size: 22px;
       font-weight: bold;
       text-decoration: none;
     }
-
     .nav-links {
       display: flex;
       flex-wrap: wrap;
       gap: 22px;
     }
-
     .nav-links a {
       color: #e1e9f3;
       text-decoration: none;
       font-size: 15px;
     }
-
-    .nav-links a:hover {
-      color: #7db8ff;
-    }
+    .nav-links a:hover { color: #7db8ff; }
 
     /* HERO */
-
     .hero {
       min-height: 580px;
       background:
-        linear-gradient(
-          rgba(9, 24, 43, 0.58),
-          rgba(9, 24, 43, 0.65)
-        ),
+        linear-gradient(rgba(9,24,43,.58),rgba(9,24,43,.65)),
         url("fsae-car.png") center / cover no-repeat;
-
       display: flex;
       align-items: center;
       justify-content: center;
@@ -76,17 +55,11 @@
       color: white;
       padding: 80px 20px;
     }
-
     .hero h1 {
-      font-size: clamp(42px, 6vw, 66px);
+      font-size: clamp(42px,6vw,66px);
       margin: 0 0 12px;
     }
-
-    .hero p {
-      font-size: 19px;
-      margin: 8px 0;
-    }
-
+    .hero p { font-size: 19px; margin: 8px 0; }
     .hero-button {
       display: inline-block;
       margin-top: 25px;
@@ -97,27 +70,21 @@
       font-weight: bold;
       text-decoration: none;
     }
-
-    .hero-button:hover {
-      background: #dce7f5;
-    }
+    .hero-button:hover { background: #dce7f5; }
 
     /* ABOUT ME */
-
     .about {
       background: white;
       padding: 75px 8% 55px;
     }
-
     .about-container {
       max-width: 1150px;
       margin: auto;
       display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
+      grid-template-columns: .9fr 1.1fr;
       gap: 55px;
       align-items: center;
     }
-
     .about-photo img {
       display: block;
       width: 100%;
@@ -125,183 +92,149 @@
       object-fit: cover;
       border-radius: 5px;
     }
-
     .about-text h2 {
       font-size: 34px;
       color: #10233d;
       margin-top: 0;
     }
-
     .about-text p {
       font-size: 17px;
       margin-bottom: 17px;
     }
 
     /* SECTION DIVIDER */
-
     .section-divider {
       background: white;
       padding: 0 8%;
     }
-
     .section-divider-line {
       max-width: 1150px;
-      margin: 0 auto;
       height: 3px;
+      margin: auto;
       background: #10233d;
       border-radius: 3px;
     }
 
-    /* PHOTO GALLERY */
-
+    /* SMALLER DRIVER-TESTING STYLE GALLERY */
     .gallery-section {
       background: white;
-      padding: 45px 8% 75px;
+      padding: 35px 8% 60px;
     }
-
     .gallery-container {
-      max-width: 1150px;
+      max-width: 850px;
       margin: auto;
       display: grid;
       grid-template-columns: 1fr 2fr;
-      gap: 20px;
+      gap: 14px;
       align-items: stretch;
     }
-
     .gallery-card {
-      background: #f0f2f5;
-      overflow: hidden;
       margin: 0;
       display: flex;
       flex-direction: column;
+      background: #f0f2f5;
+      overflow: hidden;
+      min-width: 0;
     }
-
     .gallery-card img {
       display: block;
       width: 100%;
-      object-fit: cover;
+      object-fit: contain;
     }
-
-    /* CENTERED CAPTIONS */
-
     .gallery-card figcaption {
       background: #f7f9fc;
       color: #243247;
-      padding: 14px 16px;
-      font-size: 15px;
-      line-height: 1.5;
+      padding: 9px 12px;
+      font-size: 13px;
+      line-height: 1.4;
       text-align: center;
     }
 
-    /* ORIGINAL LEFT IMAGE SIZING */
-
+    /* LEFT TALL IMAGE */
     .gallery-tall img {
       height: 100%;
       min-height: 0;
       flex: 1;
-      object-fit: cover;
-      object-position: center;
+      object-fit: contain;
     }
 
-    /* RIGHT STACKED PHOTOS */
-
+    /* TWO STACKED RIGHT IMAGES */
     .gallery-right {
       display: grid;
       grid-template-rows: 1fr 1fr;
-      gap: 20px;
-      min-height: 650px;
+      gap: 14px;
+      height: 490px;
     }
-
-    .gallery-right .gallery-card {
-      min-height: 0;
-    }
-
+    .gallery-right .gallery-card { min-height: 0; }
     .gallery-right .gallery-card img {
       height: 0;
       min-height: 0;
       flex: 1;
-      object-fit: cover;
+      object-fit: contain;
     }
 
     /* PORTFOLIO CARDS */
-
     .portfolio {
       padding: 75px 8%;
       background: #f7f9fc;
     }
-
     .section-heading {
       text-align: center;
       color: #10233d;
       font-size: 34px;
       margin: 0 0 40px;
     }
-
     .portfolio-grid {
       max-width: 1150px;
       margin: auto;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3,1fr);
       gap: 25px;
     }
-
     .portfolio-card {
       background: white;
       padding: 35px 25px;
       text-align: center;
       border-radius: 6px;
-      box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+      box-shadow: 0 4px 18px rgba(0,0,0,.06);
       text-decoration: none;
       color: #243247;
-      transition: transform 0.2s, box-shadow 0.2s;
+      transition: transform .2s,box-shadow .2s;
     }
-
     .portfolio-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      box-shadow: 0 8px 25px rgba(0,0,0,.1);
     }
-
     .portfolio-card h3 {
       color: #10233d;
       font-size: 23px;
       margin-top: 0;
     }
-
     .portfolio-card p {
       font-size: 16px;
       margin-bottom: 0;
     }
 
     /* CONTACT */
-
     .contact {
       background: white;
       padding: 70px 8%;
       text-align: center;
     }
-
     .contact h2 {
       color: #10233d;
       font-size: 34px;
       margin-top: 0;
     }
-
     .contact p {
       font-size: 17px;
       margin: 12px 0;
     }
-
     .contact a {
       color: #244a72;
       text-decoration: none;
     }
-
-    .contact a:hover {
-      text-decoration: underline;
-    }
-
-    /* SOCIAL BUBBLES */
-
+    .contact a:hover { text-decoration: underline; }
     .social-links {
       display: flex;
       justify-content: center;
@@ -310,7 +243,6 @@
       flex-wrap: wrap;
       margin-top: 28px;
     }
-
     .contact .social-bubble {
       display: inline-flex;
       align-items: center;
@@ -324,27 +256,20 @@
       font-size: 16px;
       font-weight: bold;
       text-decoration: none;
-      transition:
-        background 0.2s,
-        color 0.2s,
-        transform 0.2s;
+      transition: background .2s,color .2s,transform .2s;
     }
-
     .contact .social-bubble:hover {
       background: white;
       color: #10233d;
       text-decoration: none;
       transform: translateY(-3px);
     }
-
     .social-bubble svg {
       width: 20px;
       height: 20px;
       fill: currentColor;
       flex-shrink: 0;
     }
-
-    /* FOOTER */
 
     footer {
       background: #10233d;
@@ -355,101 +280,53 @@
     }
 
     /* TABLET */
-
     @media (max-width: 900px) {
-      .about-container {
-        gap: 30px;
-      }
-
-      .gallery-container {
-        grid-template-columns: 1fr 1.5fr;
-      }
-
-      .gallery-right {
-        min-height: 530px;
-      }
-
-      .portfolio-grid {
-        gap: 15px;
-      }
+      .about-container { gap: 30px; }
+      .gallery-container { max-width: 740px; }
+      .gallery-right { height: 430px; }
+      .portfolio-grid { gap: 15px; }
     }
 
     /* MOBILE */
-
     @media (max-width: 700px) {
-      nav {
-        justify-content: center;
-      }
-
+      nav { justify-content: center; }
       .nav-links {
         justify-content: center;
         gap: 14px;
       }
-
-      .hero {
-        min-height: 480px;
-      }
-
-      .hero p {
-        font-size: 16px;
-      }
-
-      .about {
-        padding: 55px 6% 35px;
-      }
-
+      .hero { min-height: 480px; }
+      .hero p { font-size: 16px; }
+      .about { padding: 55px 6% 35px; }
       .about-container {
         grid-template-columns: 1fr;
         gap: 25px;
       }
-
-      .section-divider {
-        padding: 0 6%;
-      }
-
-      .gallery-section {
-        padding: 35px 6% 55px;
-      }
-
+      .section-divider { padding: 0 6%; }
+      .gallery-section { padding: 28px 6% 45px; }
       .gallery-container {
         grid-template-columns: 1fr;
-        gap: 18px;
+        max-width: 440px;
+        gap: 14px;
       }
-
       .gallery-tall img {
-        height: 420px;
+        height: 320px;
         flex: none;
-        object-fit: cover;
+        object-fit: contain;
       }
-
       .gallery-right {
         display: flex;
         flex-direction: column;
-        min-height: 0;
-        gap: 18px;
+        height: auto;
+        gap: 14px;
       }
-
       .gallery-right .gallery-card img {
-        height: 240px;
+        height: 205px;
         flex: none;
       }
-
-      .portfolio {
-        padding: 55px 6%;
-      }
-
-      .portfolio-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .contact {
-        padding: 55px 6%;
-      }
-
-      .social-links {
-        gap: 12px;
-      }
-
+      .portfolio { padding: 55px 6%; }
+      .portfolio-grid { grid-template-columns: 1fr; }
+      .contact { padding: 55px 6%; }
+      .social-links { gap: 12px; }
       .contact .social-bubble {
         padding: 11px 20px;
         font-size: 15px;
@@ -461,10 +338,8 @@
 <body>
 
   <!-- NAVIGATION -->
-
   <nav>
     <a href="index.html" class="logo">Alexander Lam</a>
-
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="#about">About Me</a>
@@ -476,14 +351,12 @@
   </nav>
 
   <!-- HERO -->
-
   <section class="hero" id="home">
     <div>
       <h1>Alexander Lam</h1>
       <p>Honors Mechanical Engineering Student</p>
       <p>University of Houston</p>
       <p>Anticipated Graduation: Spring 2029</p>
-
       <a href="#portfolio" class="hero-button">
         View My Portfolio
       </a>
@@ -491,26 +364,19 @@
   </section>
 
   <!-- ABOUT ME -->
-
   <section class="about" id="about">
     <div class="about-container">
-
       <div class="about-photo">
-        <img
-          src="Headshot.png"
-          alt="Alexander Lam headshot">
+        <img src="Headshot.png" alt="Alexander Lam headshot">
       </div>
-
       <div class="about-text">
         <h2>Hey there, I'm Alex!</h2>
-
         <p>
           I'm a Second Year Honors Mechanical Engineering
           student at the University of Houston with
           hands-on experience in design, analysis,
           and rapid prototyping.
         </p>
-
         <p>
           I'm particularly interested in aerospace
           systems, energy technologies, and applied
@@ -518,11 +384,7 @@
           analytical work with real-world testing
           and iteration.
         </p>
-
-        <p>
-          Take a look at some of my projects!
-        </p>
-
+        <p>Take a look at some of my projects!</p>
         <p>
           <strong>
             Currently seeking co-op opportunities for
@@ -530,81 +392,57 @@
           </strong>
         </p>
       </div>
-
     </div>
   </section>
 
   <!-- SECTION BREAK -->
-
   <div class="section-divider" aria-hidden="true">
     <div class="section-divider-line"></div>
   </div>
 
-  <!-- FSAE PHOTO GALLERY -->
-
-  <section
-    class="gallery-section"
-    aria-label="Formula SAE photo gallery">
-
+  <!-- DRIVER-TESTING STYLE PHOTO GALLERY -->
+  <section class="gallery-section"
+           aria-label="Formula SAE photo gallery">
     <div class="gallery-container">
 
-      <!-- LEFT TALL PHOTO -->
-
+      <!-- TALL LEFT PHOTO -->
       <figure class="gallery-card gallery-tall">
-        <img
-          src="Shop.png"
-          alt="Assembling MTB coilovers in the workshop"
-          loading="lazy">
-
+        <img src="Shop.png"
+             alt="Assembling MTB coilovers in the workshop"
+             loading="lazy">
         <figcaption>
           Assembling new MTB coilovers for testing
         </figcaption>
       </figure>
 
-      <!-- RIGHT STACKED PHOTOS -->
-
+      <!-- TWO PHOTOS ON RIGHT -->
       <div class="gallery-right">
-
-        <!-- TOP RIGHT -->
-
         <figure class="gallery-card">
-          <img
-            src="Team.jpg"
-            alt="2025 Formula SAE competition team"
-            loading="lazy">
-
+          <img src="Team.jpg"
+               alt="2025 Formula SAE competition team"
+               loading="lazy">
           <figcaption>
             2025 internal combustion competition team photo
           </figcaption>
         </figure>
 
-        <!-- BOTTOM RIGHT -->
-
         <figure class="gallery-card">
-          <img
-            src="Review.JPG"
-            alt="External design review for the 2025-2026 car"
-            loading="lazy">
-
+          <img src="Review.JPG"
+               alt="External design review for the 2025-2026 car"
+               loading="lazy">
           <figcaption>
             External design review for the 2025-2026 car
           </figcaption>
         </figure>
-
       </div>
 
     </div>
-
   </section>
 
-  <!-- PORTFOLIO CARDS -->
-
+  <!-- PORTFOLIO -->
   <section class="portfolio" id="portfolio">
-
     <h2 class="section-heading">My Portfolio</h2>
-
     <div class="portfolio-grid">
-
       <a class="portfolio-card" href="projects.html">
         <h3>Projects</h3>
         <p>
@@ -612,7 +450,6 @@
           manufacturing, and prototyping projects.
         </p>
       </a>
-
       <a class="portfolio-card" href="experience.html">
         <h3>Work Experience</h3>
         <p>
@@ -620,7 +457,6 @@
           experience and technical contributions.
         </p>
       </a>
-
       <a class="portfolio-card" href="hobbies.html">
         <h3>Hobbies</h3>
         <p>
@@ -628,24 +464,16 @@
           outside of engineering.
         </p>
       </a>
-
     </div>
-
   </section>
 
   <!-- CONTACT -->
-
   <section class="contact" id="contact">
-
     <h2>Contact Me</h2>
-
     <p>
       Phone:
-      <a href="tel:2817065568">
-        281-706-5568
-      </a>
+      <a href="tel:2817065568">281-706-5568</a>
     </p>
-
     <p>
       Email:
       <a href="mailto:alexanderlam32@gmail.com">
@@ -653,48 +481,32 @@
       </a>
     </p>
 
-    <!-- SOCIAL BUBBLES -->
-
     <div class="social-links">
-
-      <!-- LINKEDIN -->
-
-      <a
-        class="social-bubble"
-        href="https://www.linkedin.com/in/alam329/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Alexander Lam on LinkedIn">
-
+      <a class="social-bubble"
+         href="https://www.linkedin.com/in/alam329/"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="Alexander Lam on LinkedIn">
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.35V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0z"/>
         </svg>
-
         LinkedIn
       </a>
 
-      <!-- GITHUB -->
-
-      <a
-        class="social-bubble"
-        href="https://github.com/alexanderlam32-alt"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Alexander Lam on GitHub">
-
+      <a class="social-bubble"
+         href="https://github.com/alexanderlam32-alt"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="Alexander Lam on GitHub">
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M12 .297a12 12 0 0 0-3.793 23.385c.6.111.82-.261.82-.577v-2.234c-3.338.726-4.043-1.416-4.043-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.605-2.665-.304-5.466-1.333-5.466-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.536-1.524.117-3.176 0 0 1.008-.323 3.301 1.23a11.52 11.52 0 0 1 6.007 0c2.291-1.553 3.297-1.23 3.297-1.23.655 1.652.243 2.873.12 3.176.77.84 1.235 1.91 1.235 3.221 0 4.61-2.804 5.624-5.475 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.216.694.825.576A12.001 12.001 0 0 0 12 .297z"/>
         </svg>
-
         GitHub
       </a>
-
     </div>
-
   </section>
 
   <!-- FOOTER -->
-
   <footer>
     <p>Alexander Lam | Mechanical Engineering</p>
     <p>University of Houston</p>
