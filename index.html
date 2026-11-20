@@ -23,6 +23,8 @@
       line-height: 1.6;
     }
 
+    /* NAVIGATION */
+
     nav {
       background: #10233d;
       padding: 18px 8%;
@@ -164,20 +166,29 @@
       object-fit: cover;
     }
 
+    /* CENTERED CAPTIONS */
+
     .gallery-card figcaption {
       background: #f7f9fc;
       color: #243247;
       padding: 14px 16px;
       font-size: 15px;
       line-height: 1.5;
+      text-align: center;
     }
+
+    /* LEFT PHOTO - SHOW FULL IMAGE */
 
     .gallery-tall img {
       height: 100%;
       min-height: 0;
       flex: 1;
+      object-fit: contain;
       object-position: center;
+      background: #f0f2f5;
     }
+
+    /* RIGHT STACKED PHOTOS */
 
     .gallery-right {
       display: grid;
@@ -194,6 +205,7 @@
       height: 0;
       min-height: 0;
       flex: 1;
+      object-fit: cover;
     }
 
     /* PORTFOLIO CARDS */
@@ -273,6 +285,8 @@
       text-decoration: underline;
     }
 
+    /* FOOTER */
+
     footer {
       background: #10233d;
       color: #dce7f5;
@@ -342,6 +356,7 @@
       .gallery-tall img {
         height: 420px;
         flex: none;
+        object-fit: contain;
       }
 
       .gallery-right {
