@@ -1,18 +1,12 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-
-  <title>Alexander Lam | Engineering Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alexander Lam | Mechanical Engineering</title>
 
   <style>
-
-    /* GENERAL STYLING */
-
     * {
       box-sizing: border-box;
     }
@@ -26,10 +20,8 @@
       font-family: Arial, Helvetica, sans-serif;
       background: #f7f9fc;
       color: #243247;
-      line-height: 1.7;
+      line-height: 1.6;
     }
-
-    /* NAVIGATION BAR */
 
     nav {
       background: #10233d;
@@ -58,281 +50,228 @@
       color: #e1e9f3;
       text-decoration: none;
       font-size: 15px;
-      transition: color 0.2s;
     }
 
     .nav-links a:hover {
       color: #7db8ff;
     }
 
-    /* HERO SECTION */
+    /* HERO */
 
     .hero {
-      position: relative;
-
+      min-height: 580px;
       background:
         linear-gradient(
-          rgba(10, 22, 40, 0.58),
-          rgba(10, 22, 40, 0.68)
+          rgba(9, 24, 43, 0.58),
+          rgba(9, 24, 43, 0.65)
         ),
-        url("fsae-car.png");
-
-      background-size: cover;
-      background-position: center 52%;
-      background-repeat: no-repeat;
-      background-color: #10233d;
-
-      color: white;
-      text-align: center;
-
-      min-height: 520px;
-      padding: 100px 20px;
-
+        url("fsae-car.png") center / cover no-repeat;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 80px 20px;
     }
 
     .hero h1 {
-      font-size: clamp(40px, 6vw, 64px);
-      font-weight: 700;
-      margin: 0 0 10px;
-      letter-spacing: 1px;
-
-      text-shadow:
-        0 3px 12px rgba(0,0,0,0.35);
+      font-size: clamp(42px, 6vw, 66px);
+      margin: 0 0 12px;
     }
 
     .hero p {
       font-size: 19px;
-      color: #ffffff;
-      margin: 6px 0;
-
-      text-shadow:
-        0 2px 8px rgba(0,0,0,0.5);
-    }
-
-    .hero .graduation {
-      font-size: 16px;
-      color: #e0e9f4;
-      margin-top: 12px;
+      margin: 8px 0;
     }
 
     .hero-button {
       display: inline-block;
-      margin-top: 28px;
-      padding: 12px 28px;
-
+      margin-top: 25px;
       background: white;
       color: #10233d;
-
-      text-decoration: none;
-      border-radius: 6px;
+      padding: 13px 27px;
+      border-radius: 5px;
       font-weight: bold;
-
-      transition:
-        transform 0.2s,
-        background 0.2s;
+      text-decoration: none;
     }
 
     .hero-button:hover {
-      transform: translateY(-3px);
-      background: #e8f1fb;
+      background: #dce7f5;
     }
 
-    /* GENERAL LAYOUT */
-
-    .container {
-      max-width: 1300px;
-      margin: auto;
-      padding: 75px 25px;
-    }
-
-    h2 {
-      font-size: 34px;
-      color: #10233d;
-      margin-top: 0;
-      margin-bottom: 25px;
-    }
-
-    /* ABOUT ME SECTION */
+    /* ABOUT ME */
 
     .about {
       background: white;
+      padding: 75px 8% 50px;
     }
 
-    .about .container {
-      max-width: 1400px;
-      padding: 45px 35px;
-    }
-
-    .about-layout {
+    .about-container {
+      max-width: 1150px;
+      margin: auto;
       display: grid;
-      grid-template-columns:
-        minmax(0, 517fr) minmax(0, 699fr);
-      gap: 43px;
-      align-items: start;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 55px;
+      align-items: center;
     }
 
-    .about-photo {
+    .about-photo img {
+      display: block;
       width: 100%;
       aspect-ratio: 517 / 490;
       object-fit: cover;
-      object-position: center;
-      display: block;
+      border-radius: 5px;
     }
 
-    .about-content {
-      padding-top: 14px;
+    .about-text h2 {
+      font-size: 34px;
+      color: #10233d;
+      margin-top: 0;
     }
 
-    .about-content h2 {
-      font-size: 42px;
-      color: #000000;
-      margin-bottom: 35px;
-      line-height: 1.2;
-    }
-
-    .about-content p {
-      font-size: 20px;
-      line-height: 1.7;
-      color: #000000;
-      margin: 0 0 20px;
-    }
-
-    .about-content .intro {
-      margin-bottom: 20px;
-    }
-
-    /* PORTFOLIO SECTION */
-
-    .portfolio-section {
-      background: #f7f9fc;
-    }
-
-    .section-description {
+    .about-text p {
       font-size: 17px;
-      color: #5b6878;
-      margin-bottom: 35px;
+      margin-bottom: 17px;
     }
 
-    .card-grid {
+    /* PHOTO GALLERY */
+
+    .gallery-section {
+      background: white;
+      padding: 10px 8% 75px;
+    }
+
+    .gallery-container {
+      max-width: 1150px;
+      margin: auto;
       display: grid;
-      grid-template-columns:
-        repeat(3, minmax(0, 1fr));
-      gap: 25px;
+      grid-template-columns: 1fr 2fr;
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .gallery-card {
+      background: #f0f2f5;
+      overflow: hidden;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .gallery-card img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .gallery-card figcaption {
+      background: #f7f9fc;
+      color: #243247;
+      padding: 14px 16px;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .gallery-tall img {
+      height: 100%;
+      min-height: 0;
+      flex: 1;
+      object-position: center;
+    }
+
+    .gallery-right {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      gap: 20px;
+      min-height: 650px;
+    }
+
+    .gallery-right .gallery-card {
+      min-height: 0;
+    }
+
+    .gallery-right .gallery-card img {
+      height: 0;
+      min-height: 0;
+      flex: 1;
     }
 
     /* PORTFOLIO CARDS */
 
-    .card {
-      background: white;
-      border: 1px solid #e4e9ef;
-      border-radius: 12px;
-      padding: 35px 28px;
+    .portfolio {
+      padding: 75px 8%;
+      background: #f7f9fc;
+    }
 
+    .section-heading {
+      text-align: center;
+      color: #10233d;
+      font-size: 34px;
+      margin: 0 0 40px;
+    }
+
+    .portfolio-grid {
+      max-width: 1150px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .portfolio-card {
+      background: white;
+      padding: 35px 25px;
+      text-align: center;
+      border-radius: 6px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.06);
       text-decoration: none;
       color: #243247;
-
-      box-shadow:
-        0 5px 18px rgba(0,0,0,0.05);
-
-      display: flex;
-      flex-direction: column;
-
-      transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
+      transition: transform 0.2s, box-shadow 0.2s;
     }
 
-    .card:hover {
-      transform: translateY(-7px);
-
-      box-shadow:
-        0 14px 30px rgba(0,0,0,0.12);
+    .portfolio-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
     }
 
-    .card-icon {
-      font-size: 38px;
-      margin-bottom: 15px;
-    }
-
-    .card h3 {
-      font-size: 24px;
+    .portfolio-card h3 {
       color: #10233d;
-      margin: 0 0 12px;
+      font-size: 23px;
+      margin-top: 0;
     }
 
-    .card p {
-      font-size: 15px;
-      color: #5b6878;
-      margin: 0 0 25px;
-      flex-grow: 1;
+    .portfolio-card p {
+      font-size: 16px;
+      margin-bottom: 0;
     }
 
-    .card-link {
-      font-size: 15px;
-      font-weight: bold;
-      color: #2768a8;
-    }
-
-    /* CONTACT SECTION */
+    /* CONTACT */
 
     .contact {
       background: white;
+      padding: 70px 8%;
       text-align: center;
     }
 
+    .contact h2 {
+      color: #10233d;
+      font-size: 34px;
+      margin-top: 0;
+    }
+
     .contact p {
-      color: #5b6878;
       font-size: 17px;
+      margin: 12px 0;
     }
 
-    .contact-details {
-      margin: 25px 0;
-    }
-
-    .contact-details p {
-      margin: 8px 0;
-    }
-
-    .contact-details a {
-      color: #2768a8;
+    .contact a {
+      color: #244a72;
       text-decoration: none;
     }
 
-    .contact-details a:hover {
+    .contact a:hover {
       text-decoration: underline;
     }
-
-    .contact-links {
-      margin-top: 25px;
-    }
-
-    .contact-links a {
-      display: inline-block;
-      margin: 8px;
-      padding: 10px 22px;
-
-      border: 1px solid #2768a8;
-      border-radius: 6px;
-
-      color: #2768a8;
-      text-decoration: none;
-      font-weight: bold;
-
-      transition:
-        background 0.2s,
-        color 0.2s;
-    }
-
-    .contact-links a:hover {
-      background: #2768a8;
-      color: white;
-    }
-
-    /* FOOTER */
 
     footer {
       background: #10233d;
@@ -342,198 +281,220 @@
       font-size: 14px;
     }
 
-    /* TABLET RESPONSIVENESS */
+    /* TABLET */
 
-    @media (max-width: 1000px) {
-
-      .about-layout {
+    @media (max-width: 900px) {
+      .about-container {
         gap: 30px;
       }
 
-      .about-content h2 {
-        font-size: 34px;
-        margin-bottom: 20px;
+      .gallery-container {
+        grid-template-columns: 1fr 1.5fr;
       }
 
-      .about-content p {
-        font-size: 17px;
+      .gallery-right {
+        min-height: 530px;
       }
 
+      .portfolio-grid {
+        gap: 15px;
+      }
     }
 
-    /* MOBILE RESPONSIVENESS */
+    /* MOBILE */
 
-    @media (max-width: 800px) {
-
-      .card-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        min-height: 430px;
-        padding: 75px 20px;
-        background-position: center;
-      }
-
-      .hero h1 {
-        font-size: 42px;
-      }
-
-      .hero p {
-        font-size: 16px;
-      }
-
-      .container {
-        padding: 55px 20px;
-      }
-
-      .about .container {
-        padding: 40px 20px;
-      }
-
-      .about-layout {
-        grid-template-columns: 1fr;
-        gap: 30px;
-      }
-
-      .about-photo {
-        max-width: 520px;
-        margin: auto;
-      }
-
-      .about-content {
-        padding-top: 0;
-      }
-
-      .about-content h2 {
-        font-size: 32px;
-      }
-
+    @media (max-width: 700px) {
       nav {
         justify-content: center;
       }
 
       .nav-links {
         justify-content: center;
-        gap: 15px;
+        gap: 14px;
       }
 
-      h2 {
-        font-size: 28px;
+      .hero {
+        min-height: 480px;
       }
 
+      .hero p {
+        font-size: 16px;
+      }
+
+      .about {
+        padding: 55px 6% 35px;
+      }
+
+      .about-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .gallery-section {
+        padding: 10px 6% 55px;
+      }
+
+      .gallery-container {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .gallery-tall img {
+        height: 420px;
+        flex: none;
+      }
+
+      .gallery-right {
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+        gap: 18px;
+      }
+
+      .gallery-right .gallery-card img {
+        height: 240px;
+        flex: none;
+      }
+
+      .portfolio {
+        padding: 55px 6%;
+      }
+
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact {
+        padding: 55px 6%;
+      }
     }
-
   </style>
 </head>
 
 <body>
 
-  <!-- NAVIGATION BAR -->
+  <!-- NAVIGATION -->
 
   <nav>
-
-    <a class="logo" href="index.html">
-      Alexander Lam
-    </a>
+    <a href="index.html" class="logo">Alexander Lam</a>
 
     <div class="nav-links">
-
       <a href="index.html">Home</a>
-
       <a href="#about">About Me</a>
-
       <a href="projects.html">Projects</a>
-
-      <a href="experience.html">
-        Work Experience
-      </a>
-
+      <a href="experience.html">Work Experience</a>
       <a href="hobbies.html">Hobbies</a>
-
       <a href="#contact">Contact</a>
-
     </div>
-
   </nav>
 
+  <!-- HERO -->
 
-  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <div>
+      <h1>Alexander Lam</h1>
+      <p>Honors Mechanical Engineering Student</p>
+      <p>University of Houston</p>
+      <p>Anticipated Graduation: Spring 2029</p>
 
-  <header class="hero" id="home">
+      <a href="#portfolio" class="hero-button">
+        View My Portfolio
+      </a>
+    </div>
+  </section>
 
-    <h1>Alexander Lam</h1>
-
-    <p>
-      Honors Mechanical Engineering Student
-    </p>
-
-    <p>
-      University of Houston
-    </p>
-
-    <p class="graduation">
-      Anticipated Graduation: Spring 2029
-    </p>
-
-    <a class="hero-button" href="#portfolio">
-      Explore My Portfolio
-    </a>
-
-  </header>
-
-
-  <!-- ABOUT ME SECTION -->
+  <!-- ABOUT ME -->
 
   <section class="about" id="about">
+    <div class="about-container">
 
-    <div class="container">
+      <div class="about-photo">
+        <img src="Headshot.png"
+             alt="Alexander Lam headshot">
+      </div>
 
-      <div class="about-layout">
+      <div class="about-text">
+        <h2>Hey there, I'm Alex!</h2>
 
-        <!-- HEADSHOT ON LEFT -->
+        <p>
+          I'm a Second Year Honors Mechanical Engineering
+          student at the University of Houston with
+          hands-on experience in design, analysis,
+          and rapid prototyping.
+        </p>
 
+        <p>
+          I'm particularly interested in aerospace
+          systems, energy technologies, and applied
+          mechanical design, where I can combine
+          analytical work with real-world testing
+          and iteration.
+        </p>
+
+        <p>
+          Take a look at some of my projects!
+        </p>
+
+        <p>
+          <strong>
+            Currently seeking co-op opportunities for
+            Fall 2027 or Spring 2028.
+          </strong>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FSAE PHOTO GALLERY -->
+
+  <section class="gallery-section"
+           aria-label="Formula SAE photo gallery">
+
+    <div class="gallery-container">
+
+      <!-- LEFT TALL PHOTO -->
+
+      <figure class="gallery-card gallery-tall">
         <img
-          src="Headshot.png"
-          alt="Alexander Lam"
-          class="about-photo">
+          src="Shop.png"
+          alt="Assembling MTB coilovers in the workshop"
+          loading="lazy">
 
-        <!-- BIOGRAPHY ON RIGHT -->
+        <figcaption>
+          Assembling new MTB coilovers for testing
+        </figcaption>
+      </figure>
 
-        <div class="about-content">
+      <!-- RIGHT STACKED PHOTOS -->
 
-          <h2>About Me</h2>
+      <div class="gallery-right">
 
-          <p class="intro">
-            Hey there, I'm Alex!
-          </p>
+        <!-- TOP RIGHT -->
 
-          <p>
-            I'm a Second Year Honors Mechanical
-            Engineering student at the University
-            of Houston with hands-on experience
-            in design, analysis, and rapid
-            prototyping.
-          </p>
+        <figure class="gallery-card">
+          <img
+            src="Team.jpg"
+            alt="2025 Formula SAE competition team"
+            loading="lazy">
 
-          <p>
-            I'm particularly interested in
-            aerospace systems, energy technologies,
-            and applied mechanical design, where
-            I can combine analytical work with
-            real-world testing and iteration.
-          </p>
+          <figcaption>
+            2025 internal combustion competition team photo
+          </figcaption>
+        </figure>
 
-          <p>
-            Take a look at some of my projects!
-          </p>
+        <!-- BOTTOM RIGHT -->
 
-          <p>
-            Currently seeking co-op
-            opportunities for Fall 2027 or Spring 2028.
-          </p>
+        <figure class="gallery-card">
+          <img
+            src="Review.JPG"
+            alt="External design review for the 2025-2026 car"
+            loading="lazy">
 
-        </div>
+          <figcaption>
+            External design review for the 2025-2026 car
+          </figcaption>
+        </figure>
 
       </div>
 
@@ -541,167 +502,83 @@
 
   </section>
 
+  <!-- PORTFOLIO CARDS -->
 
-  <!-- PORTFOLIO SECTION -->
+  <section class="portfolio" id="portfolio">
 
-  <section
-    class="portfolio-section"
-    id="portfolio">
+    <h2 class="section-heading">My Portfolio</h2>
 
-    <div class="container">
+    <div class="portfolio-grid">
 
-      <h2>Explore My Portfolio</h2>
+      <a class="portfolio-card" href="projects.html">
+        <h3>Projects</h3>
+        <p>
+          Explore my engineering design, analysis,
+          manufacturing, and prototyping projects.
+        </p>
+      </a>
 
-      <p class="section-description">
-        Explore my engineering projects,
-        professional experience, and
-        interests outside of engineering.
-      </p>
+      <a class="portfolio-card" href="experience.html">
+        <h3>Work Experience</h3>
+        <p>
+          Learn more about my professional engineering
+          experience and technical contributions.
+        </p>
+      </a>
 
-      <div class="card-grid">
-
-        <!-- PROJECTS -->
-
-        <a href="projects.html" class="card">
-
-          <div class="card-icon">⚙️</div>
-
-          <h3>Projects</h3>
-
-          <p>
-            Explore my engineering projects,
-            including mechanical design,
-            CAD modeling, structural analysis,
-            robotics, and rapid prototyping.
-          </p>
-
-          <span class="card-link">
-            View Projects &rarr;
-          </span>
-
-        </a>
-
-
-        <!-- WORK EXPERIENCE -->
-
-        <a href="experience.html" class="card">
-
-          <div class="card-icon">🏭</div>
-
-          <h3>Work Experience</h3>
-
-          <p>
-            Learn about my professional
-            engineering experience,
-            technical contributions,
-            and exposure to the
-            energy and manufacturing industries.
-          </p>
-
-          <span class="card-link">
-            View Experience &rarr;
-          </span>
-
-        </a>
-
-
-        <!-- HOBBIES -->
-
-        <a href="hobbies.html" class="card">
-
-          <div class="card-icon">📷</div>
-
-          <h3>Hobbies</h3>
-
-          <p>
-            Get to know me beyond engineering
-            through my personal interests,
-            hobbies, and activities
-            outside the classroom.
-          </p>
-
-          <span class="card-link">
-            Explore Hobbies &rarr;
-          </span>
-
-        </a>
-
-      </div>
+      <a class="portfolio-card" href="hobbies.html">
+        <h3>Hobbies</h3>
+        <p>
+          Get to know my interests and activities
+          outside of engineering.
+        </p>
+      </a>
 
     </div>
 
   </section>
 
-
-  <!-- CONTACT SECTION -->
+  <!-- CONTACT -->
 
   <section class="contact" id="contact">
 
-    <div class="container">
+    <h2>Contact Me</h2>
 
-      <h2>Let's Connect</h2>
+    <p>
+      Phone:
+      <a href="tel:2817065568">281-706-5568</a>
+    </p>
 
-      <p>
-        Feel free to reach out regarding
-        engineering opportunities,
-        projects, or professional connections.
-      </p>
+    <p>
+      Email:
+      <a href="mailto:alexanderlam32@gmail.com">
+        alexanderlam32@gmail.com
+      </a>
+    </p>
 
-      <div class="contact-details">
+    <p>
+      LinkedIn:
+      <a href="https://www.linkedin.com/in/alam329/"
+         target="_blank" rel="noopener noreferrer">
+        linkedin.com/in/alam329
+      </a>
+    </p>
 
-        <p>
-          <strong>Phone:</strong>
-
-          <a href="tel:+12817065568">
-            281-706-5568
-          </a>
-        </p>
-
-        <p>
-          <strong>Email:</strong>
-
-          <a href="mailto:alexanderlam32@gmail.com">
-            alexanderlam32@gmail.com
-          </a>
-        </p>
-
-      </div>
-
-      <div class="contact-links">
-
-        <a
-          href="https://www.linkedin.com/in/alam329/"
-          target="_blank"
-          rel="noopener noreferrer">
-          LinkedIn
-        </a>
-
-        <a
-          href="https://github.com/alexanderlam32-alt"
-          target="_blank"
-          rel="noopener noreferrer">
-          GitHub
-        </a>
-
-      </div>
-
-    </div>
+    <p>
+      GitHub:
+      <a href="https://github.com/alexanderlam32-alt"
+         target="_blank" rel="noopener noreferrer">
+        github.com/alexanderlam32-alt
+      </a>
+    </p>
 
   </section>
-
 
   <!-- FOOTER -->
 
   <footer>
-
-    <p>
-      Alexander Lam | Mechanical Engineering
-    </p>
-
-    <p>
-      University of Houston
-    </p>
-
+    <p>Alexander Lam | Mechanical Engineering</p>
+    <p>University of Houston</p>
   </footer>
 
 </body>
