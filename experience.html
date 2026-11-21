@@ -1,0 +1,639 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Work Experience | Alexander Lam</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f7f9fc;
+      color: #243247;
+      line-height: 1.6;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      background: #10233d;
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      color: white;
+      font-size: 21px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      color: #e4e9f2;
+      text-decoration: none;
+      font-size: 15px;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #bcb7ee;
+    }
+
+    /* PAGE HEADER */
+
+    .page-header {
+      background: linear-gradient(135deg, #10233d, #244a72);
+      color: white;
+      text-align: center;
+      padding: 75px 20px;
+    }
+
+    .page-header h1 {
+      font-size: clamp(36px, 5vw, 52px);
+      margin: 0 0 10px;
+    }
+
+    .page-header p {
+      color: #dce5f2;
+      font-size: 18px;
+      margin: 0;
+    }
+
+    /* MAIN CONTENT */
+
+    .experience-container {
+      max-width: 1400px;
+      margin: 45px auto;
+      padding: 0 25px;
+    }
+
+    /* COMPANY HEADING */
+
+    .company-heading {
+      background: #f0effa;
+      padding: 28px 30px;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .company-heading h2 {
+      color: #10233d;
+      text-transform: uppercase;
+      font-size: 32px;
+      margin: 0 0 8px;
+      letter-spacing: 0.5px;
+    }
+
+    .job-title {
+      font-size: 19px;
+      font-weight: bold;
+      color: #243247;
+      margin: 0 0 5px;
+    }
+
+    .job-details {
+      font-size: 16px;
+      color: #566477;
+      margin: 0;
+    }
+
+    /* COMPANY PHOTOS */
+
+    .experience-images {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 35px;
+    }
+
+    .experience-images figure {
+      margin: 0;
+      height: 270px;
+      overflow: hidden;
+      border-radius: 4px;
+      background: #e8edf4;
+    }
+
+    .experience-images img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .experience-images img:hover {
+      transform: scale(1.035);
+    }
+
+    /* INTERNSHIP OVERVIEW */
+
+    .internship-overview {
+      max-width: 1100px;
+      margin: 0 auto 45px;
+      text-align: center;
+    }
+
+    .internship-overview h3 {
+      color: #10233d;
+      font-size: 23px;
+      margin: 0 0 12px;
+    }
+
+    .internship-overview p {
+      font-size: 17px;
+      margin: 0;
+    }
+
+    /* PROJECTS */
+
+    .section-heading {
+      font-size: 27px;
+      color: #10233d;
+      margin: 0 0 28px;
+      text-align: center;
+    }
+
+    .work-project {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .work-project h4 {
+      color: #10233d;
+      font-size: 24px;
+      margin: 0 0 14px;
+    }
+
+    .project-overview {
+      margin-bottom: 22px;
+    }
+
+    .project-overview strong,
+    .contributions-title {
+      color: #10233d;
+    }
+
+    .project-overview p {
+      margin: 6px 0 0;
+      font-size: 16px;
+    }
+
+    .contributions-title {
+      font-size: 17px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .project-bullets {
+      padding-left: 23px;
+      margin: 0 0 25px;
+    }
+
+    .project-bullets li {
+      margin-bottom: 12px;
+      font-size: 16px;
+      padding-left: 4px;
+    }
+
+    /* METRIC PANELS */
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      margin-top: 25px;
+    }
+
+    .metrics.three-metrics {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .metric {
+      background: #edf0f4;
+      border: 1px solid #e0e5ec;
+      border-radius: 5px;
+      text-align: center;
+      padding: 22px 15px;
+    }
+
+    .metric-value {
+      display: block;
+      font-size: 30px;
+      font-weight: bold;
+      color: #10233d;
+      margin-bottom: 4px;
+    }
+
+    .metric-label {
+      display: block;
+      font-size: 14px;
+      color: #566477;
+    }
+
+    /* DIVIDERS */
+
+    .project-divider {
+      border: none;
+      height: 2px;
+      background: #d4dce7;
+      margin: 48px auto;
+      max-width: 1100px;
+    }
+
+    .company-divider {
+      border: none;
+      height: 3px;
+      background: #10233d;
+      margin: 65px 0;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #10233d;
+      color: #e4e9f2;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 70px;
+      font-size: 14px;
+    }
+
+    /* RESPONSIVE DESIGN */
+
+    @media (max-width: 900px) {
+      .experience-images {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .experience-images figure {
+        height: 240px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .nav-links {
+        justify-content: center;
+        gap: 14px;
+      }
+
+      .page-header {
+        padding: 55px 20px;
+      }
+
+      .experience-container {
+        padding: 0 18px;
+      }
+
+      .company-heading h2 {
+        font-size: 27px;
+      }
+
+      .experience-images {
+        grid-template-columns: 1fr;
+      }
+
+      .experience-images figure {
+        height: 260px;
+      }
+
+      .work-project h4 {
+        font-size: 21px;
+      }
+
+      .metrics,
+      .metrics.three-metrics {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <nav>
+    <a href="index.html" class="logo">Alexander Lam</a>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About Me</a>
+      <a href="projects.html">Projects</a>
+      <a href="experience.html" class="active">Work Experience</a>
+      <a href="hobbies.html">Hobbies</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+
+  <header class="page-header">
+    <h1>Work Experience</h1>
+    <p>Engineering Internships | Industry Experience</p>
+  </header>
+
+  <main class="experience-container">
+
+    <!-- EXXONMOBIL -->
+
+    <section class="company-section">
+
+      <div class="company-heading">
+        <h2>ExxonMobil</h2>
+        <p class="job-title">Machinery Engineering Intern</p>
+        <p class="job-details">
+          Beaumont, TX | January 2026 – May 2026
+        </p>
+      </div>
+
+      <!-- INTERNSHIP PHOTOS -->
+
+      <div class="experience-images">
+        <figure>
+          <img
+            src="XOM1.jpg"
+            alt="ExxonMobil internship photo 1"
+            loading="lazy"
+          >
+        </figure>
+
+        <figure>
+          <img
+            src="XOM2.jpg"
+            alt="ExxonMobil internship photo 2"
+            loading="lazy"
+          >
+        </figure>
+
+        <figure>
+          <img
+            src="XOM3.jpg"
+            alt="ExxonMobil internship photo 3"
+            loading="lazy"
+          >
+        </figure>
+      </div>
+
+      <!-- INTERNSHIP OVERVIEW -->
+
+      <div class="internship-overview">
+        <h3>Internship Overview</h3>
+        <p>
+          Supported machinery engineering and reliability initiatives
+          through equipment performance analysis, capital project
+          development, and technical evaluations of mechanical
+          equipment. Collaborated with engineering teams, equipment
+          vendors, and subject matter experts to develop solutions
+          addressing operational reliability, mechanical integrity,
+          and long-term cost optimization.
+        </p>
+      </div>
+
+      <h3 class="section-heading">Engineering Projects</h3>
+
+      <!-- PROJECT 01 -->
+
+      <article class="work-project">
+
+        <h4>01 — Pump Rerate &amp; Coupling Upgrade</h4>
+
+        <div class="project-overview">
+          <strong>Project Overview</strong>
+          <p>
+            Addressed pump cavitation caused by recent changes in
+            discharge piping while replacing obsolete coupling
+            components to improve equipment reliability and performance.
+          </p>
+        </div>
+
+        <div class="contributions-title">
+          Technical Contributions &amp; Results
+        </div>
+
+        <ul class="project-bullets">
+          <li>
+            Performed <strong>total dynamic head (TDH)
+            calculations</strong> to develop a system resistance
+            curve, conducted hydraulic analyses to determine an
+            optimal impeller diameter, and completed
+            <strong>torque calculations</strong> to select a
+            replacement coupling.
+          </li>
+
+          <li>
+            <strong>Reduced pump cavitation and improved pump
+            efficiency by 12%</strong>, generating a projected
+            <strong>$88,000 in cost savings over 10 years</strong>.
+          </li>
+
+          <li>
+            <strong>Initiated, led, and closed a Management of
+            Change (MOC)</strong> process for the proposed
+            modifications, enabling field implementation.
+          </li>
+        </ul>
+
+        <div class="metrics">
+          <div class="metric">
+            <span class="metric-value">12%</span>
+            <span class="metric-label">
+              Efficiency Improvement
+            </span>
+          </div>
+
+          <div class="metric">
+            <span class="metric-value">$88K</span>
+            <span class="metric-label">
+              Projected 10-Year Savings
+            </span>
+          </div>
+        </div>
+
+      </article>
+
+      <hr class="project-divider">
+
+      <!-- PROJECT 02 -->
+
+      <article class="work-project">
+
+        <h4>02 — Capital Projects</h4>
+
+        <div class="project-overview">
+          <strong>Project Overview</strong>
+          <p>
+            Supported the development and evaluation of capital
+            improvement projects focused on equipment reliability,
+            risk mitigation, and operational performance.
+          </p>
+        </div>
+
+        <div class="contributions-title">
+          Technical Contributions &amp; Results
+        </div>
+
+        <ul class="project-bullets">
+          <li>
+            <strong>Led five capital improvement projects</strong>,
+            including mechanical seal upgrades, wireless vibration
+            monitoring installations, and replacement of obsolete
+            equipment to enhance machinery reliability.
+          </li>
+
+          <li>
+            Managed a combined
+            <strong>$2.5 million capital project portfolio</strong>
+            aimed at mitigating mechanical failure risks with an
+            estimated <strong>$5 million in potential financial
+            exposure</strong>.
+          </li>
+
+          <li>
+            Evaluated technical solutions, conducted
+            <strong>equipment risk assessments</strong>, and
+            developed <strong>economic justifications</strong>
+            to support project approval during capital engineering
+            reviews.
+          </li>
+        </ul>
+
+        <div class="metrics three-metrics">
+          <div class="metric">
+            <span class="metric-value">5</span>
+            <span class="metric-label">
+              Capital Projects Led
+            </span>
+          </div>
+
+          <div class="metric">
+            <span class="metric-value">$2.5M</span>
+            <span class="metric-label">
+              Combined Project Value
+            </span>
+          </div>
+
+          <div class="metric">
+            <span class="metric-value">$5M</span>
+            <span class="metric-label">
+              Potential Financial Exposure Addressed
+            </span>
+          </div>
+        </div>
+
+      </article>
+
+      <hr class="project-divider">
+
+      <!-- PROJECT 03 -->
+
+      <article class="work-project">
+
+        <h4>03 — Hyper Compressor Cylinder Body Repair</h4>
+
+        <div class="project-overview">
+          <strong>Project Overview</strong>
+          <p>
+            Addressed recurring ethylene leakage caused by
+            progressive wear of hyper compressor cylinder bodies,
+            which were historically replaced rather than repaired
+            due to mechanical integrity concerns under high-pressure
+            operating conditions.
+          </p>
+        </div>
+
+        <div class="contributions-title">
+          Technical Contributions &amp; Results
+        </div>
+
+        <ul class="project-bullets">
+          <li>
+            <strong>Evaluated the technical and economic feasibility
+            of multiple repair methods</strong>, comparing
+            mechanical integrity considerations, repair costs,
+            and long-term reliability against full component
+            replacement.
+          </li>
+
+          <li>
+            <strong>Collaborated with equipment vendors and
+            ExxonMobil Subject Matter Experts (SMEs)</strong>
+            to assess repair feasibility, technical limitations,
+            and potential solutions for high-pressure compressor
+            applications.
+          </li>
+
+          <li>
+            <strong>Presented the recommended repair strategy
+            to upper management</strong>, securing funding in the
+            <strong>2027 Annual Maintenance Plan (AMP)</strong>
+            and identifying <strong>$260,000 in cost avoidance</strong>
+            compared with purchasing a new cylinder body.
+          </li>
+        </ul>
+
+        <div class="metrics">
+          <div class="metric">
+            <span class="metric-value">$260K</span>
+            <span class="metric-label">
+              Projected Cost Avoidance
+            </span>
+          </div>
+
+          <div class="metric">
+            <span class="metric-value">2027 AMP</span>
+            <span class="metric-label">
+              Repair Funding Secured
+            </span>
+          </div>
+        </div>
+
+      </article>
+
+    </section>
+
+    <!--
+      FUTURE EXPERIENCE SECTION
+
+      Add the LyondellBasell internship here later.
+
+      Use a company-divider between the two internships
+      to maintain the same visual separation.
+    -->
+
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer>
+    &copy; 2026 Alexander Lam. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
